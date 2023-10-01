@@ -7,14 +7,24 @@
         <div>
             <div>User Login</div>
             <div>
-                Username: <input type="text" value="" id="usr" required=""><br>
-                Password: <input type="password" value="" id="pwd" required="">
+                Username: <input type="text" value="" id="usr"><br>
+                Password: <input type="password" value="" id="pwd">
             </div>
             <div>
                 <a href="createacc_forgotpwd.html">Create Account / Forgot Password</a>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" onclick="login()">
             </div>
         </div>
+    <script>
+        function login(){
+            if(document.getElementById("usr").value!="" && document.getElementById("pwd").value!=""){
+                window.location.href="disclaimer.html";
+            }
+            else{
+                alert("Username and/or Password not filled");
+            }
+        }
+    </script>
     </body>
     <footer>
 

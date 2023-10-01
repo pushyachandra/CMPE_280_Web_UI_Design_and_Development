@@ -2,7 +2,15 @@
 <html>
     <head></head>
     <body>
-        
+        Get Ready the test begins in 30 seconds<br>
+        Press Start Now to start the test immediately<br>
+        <input type="submit" value="Start Now" onclick="startnow()">
+        <script>
+            function startnow(){
+                window.location.href="question1.html";
+            }
+            setTimeout(function(){window.location.href="question1.html"}, 30000);
+        </script>
     </body>
     <footer></footer>
 </html>
