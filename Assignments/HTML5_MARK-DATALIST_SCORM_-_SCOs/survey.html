@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Survey
+        </title>
+        <style>
+            textarea {
+                overflow-y: scroll;
+                height: 100px;
+                resize: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>
+                Survey
+            </div>
+            <div>
+                How did you like the center?<br>
+                <div style="display:flex">
+                    <div>Comments:&nbsp;</div><div><textarea></textarea></div>
+                </div>
+            </div>
+            <div style="width:50%;float:left;">
+                <p>Select Text Area Location:</p>
+                <div style="width:50%;float:left;">
+                    <div style="display:flex;">
+                        <div>City:&nbsp;</div>
+                        <input list="cities" name="city" id="city">
+                        <datalist id="cities">
+                            <option value="San Jose">
+                            <option value="San Francisco">
+                            <option value="Fremont">
+                            <option value="Sunnyvale">
+                            <option value="San Mateo">
+                        </datalist>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit & Get Score">
+                    </div>
+                </div>
+                <div style="width:50%;float:right;">
+                    <div style="display:flex;">
+                        <div>Room Number#:&nbsp;</div>
+                        <input list="rooms" name="room" id="room">
+                        <datalist id="rooms">
+                            <option value="Room 111">
+                            <option value="Room 222">
+                            <option value="Room 333">
+                            <option value="Room 444">
+                            <option value="Room 555">
+                        </datalist>
+                    </div>
+                    <div>
+                        <input type="submit" value="Skip & Get Score">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+    </footer>
+</html>
