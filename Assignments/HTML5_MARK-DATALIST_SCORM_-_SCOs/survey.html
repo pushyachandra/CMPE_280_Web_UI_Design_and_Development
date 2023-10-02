@@ -5,6 +5,7 @@
             Survey
         </title>
         <script type="text/javascript" src="mainscript.js"></script>
+        <link rel="stylesheet" href="survey.css">
         <style>
             textarea {
                 overflow-y: scroll;
@@ -24,9 +25,9 @@
                     <div>Comments:&nbsp;</div><div><textarea></textarea></div>
                 </div>
             </div>
-            <div style="width:50%;float:left;">
+            <div style="width:80%;float:left;">
                 <p>Select Text Area Location:</p>
-                <div style="width:50%;float:left;">
+                <div style="width:33%;float:left;">
                     <div style="display:flex;">
                         <div>City:&nbsp;</div>
                         <input list="cities" name="city" id="city">
@@ -42,7 +43,7 @@
                         <input type="submit" value="Submit & Get Score" onclick="getscore()">
                     </div>
                 </div>
-                <div style="width:50%;float:right;">
+                <div style="width:33%;float:right;">
                     <div style="display:flex;">
                         <div>Room Number#:&nbsp;</div>
                         <input list="rooms" name="room" id="room">

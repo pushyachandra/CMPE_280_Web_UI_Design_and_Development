@@ -1,0 +1,78 @@
+textarea {
+    overflow-y: scroll;
+    height: 100px;
+    resize: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+div {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+div > div:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+div > div:nth-child(2) {
+    width: 75%;
+    float: left;
+}
+
+div > div:nth-child(2) > div {
+    width: 100%;
+}
+
+div > div:nth-child(2) > div > p {
+    font-weight: bold;
+}
+
+div > div:nth-child(2) > div > div {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+div > div:nth-child(2) > div > div > div {
+    flex: 1;
+}
+
+div > div:nth-child(2) > div > div > input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+div > div:nth-child(2) > div > div:last-child > input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+div > div:nth-child(2) > div > div:last-child > input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+div > div:nth-child(2) > div > div:last-child > input[type="submit"] + input[type="submit"] {
+    margin-left: 10px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}

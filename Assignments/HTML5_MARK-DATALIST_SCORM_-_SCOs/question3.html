@@ -1,67 +1,86 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Question 3
-        </title>
-        <script type="text/javascript" src="mainscript.js"></script>
-    </head>
-    <body>
+<head>
+    <title>Question 3</title>
+    <script type="text/javascript" src="mainscript.js"></script>
+    <link rel="stylesheet" href="question3.css">
+</head>
+<body>
+    <div>
         <div>
-            <div>
-                Question 3
+            Question 3
+        </div>
+        <div>
+            <div style="width:40%;float:left;">
+                <div>As per the latest Twitter news, complete the article snippet given by selecting appropriate choices for the blanks.</div>
+                <div>
+                    <table style="width:100%;height:100%;">
+                        <tr>
+                            <td>
+                                <input type="radio" id="1a" name="mark1" onclick="updateBlanks()">
+                                Option 1 Mark 1: $650
+                            </td>
+                            <td>
+                                <input type="radio" id="1b" name="mark2" onclick="updateBlanks()">
+                                Option 1 Mark 2: Twitter
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" id="2a" name="mark1" onclick="updateBlanks()">
+                                Option 2 Mark 1: $550 
+                            </td>
+                            <td>
+                                <input type="radio" id="2b" name="mark2" onclick="updateBlanks()">
+                                Option 2 Mark 2: Google
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" id="3a" name="mark1" onclick="updateBlanks()">
+                                Option 3 Mark 1: $750
+                            </td>
+                            <td>
+                                <input type="radio" id="3b" name="mark2" onclick="updateBlanks()">
+                                Option 3 Mark 2: Facebook
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="Submit & Next Question" onclick="submit('qus3','question4.html')"></td>
+                            <td><input type="submit" value="Cancel & Clear Selection" onclick="reset()"></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            <div>
-                <div style="width:60%;float:left;">
-                    <div>As per the latest Twitter news, complete the article snippet given by selecting appropriate choices for the blanks.</div>
-                    <div>
-                        <table style="width:100%;height:100%;">
-                            <tr>
-                                <td>
-                                    <input type="radio" id="1a" name="mark1">
-                                    Option 1 Mark 1: $650
-                                </td>
-                                <td>
-                                    <input type="radio" id="1b" name="mark2">
-                                    Option 1 Mark 2: Twitter
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="radio" id="2a" name="mark1">
-                                    Option 2 Mark 1: $550 
-                                </td>
-                                <td>
-                                    <input type="radio" id="2b" name="mark2">
-                                    Option 2 Mark 2: Google
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="radio" id="3a" name="mark1">
-                                    Option 3 Mark 1: $650
-                                </td>
-                                <td>
-                                    <input type="radio" id="3b" name="mark2">
-                                    Option 3 Mark 2: Facebook
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><input type="submit" value="Submit & Next Question" onclick="submit('qus3','question4.html')"></td>
-                                <td><input type="submit" value="Cancel & Clear Selection" onclick="reset()"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div style="width:40%;float:right">
-                    "<br>
-                    Twitter wants more cash. The company announced two <mark>$_______</mark> million debt offerings in a filing today, each with a potential $100 increase provided that the sales are oversubscribed. Assuming full tip, including the $100 million boosters, <mark>________</mark> will raise up to $1.5 billion with the two offerings.<br>
-                    "<br><br>
-                    Source: https://techcrunch.com/2014/09/10/twitter-to-raise-up-to-1-5b-in-debt-offering/
-                </div>
+            <div style="width:40%;float:right">
+                "<br>
+                Twitter wants more cash. The company announced two <mark id="mark1">$_______</mark> million debt offerings in a filing today, each with a potential $100 increase provided that the sales are oversubscribed. Assuming full tip, including the $100 million boosters, <mark id="mark2">________</mark> will raise up to $1.5 billion with the two offerings.<br>
+                "<br><br>
+                Source: https://techcrunch.com/2014/09/10/twitter-to-raise-up-to-1-5b-in-debt-offering/
             </div>
         </div>
-    </body>
-    <footer>
-    </footer>
+    </div>
+    <script>
+        function updateBlanks() {
+            var mark1Selected = document.querySelector('input[name="mark1"]:checked');
+            var mark2Selected = document.querySelector('input[name="mark2"]:checked');
+            var mark1Blank = document.getElementById('mark1');
+            var mark2Blank = document.getElementById('mark2');
+
+            if (mark1Selected) {
+                mark1Blank.textContent = mark1Selected.nextSibling.textContent.trim().split(" ")[4];
+            } else {
+                mark1Blank.textContent = '$_______';
+            }
+
+            if (mark2Selected) {
+                mark2Blank.textContent = mark2Selected.nextSibling.textContent.trim().split(" ")[4];
+            } else {
+                mark2Blank.textContent = '________';
+            }
+        }
+    </script>
+</body>
+<footer>
+</footer>
 </html>

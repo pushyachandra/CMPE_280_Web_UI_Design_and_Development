@@ -1,0 +1,80 @@
+/* Apply CSS styles to the body element */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Style the main container */
+div {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the question title */
+div > div:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Style the left content container */
+div > div:nth-child(2) {
+    /* width: 60%; */
+    float: left;
+}
+
+/* Style the right content container */
+div > div:nth-child(2) > div {
+    width: 100%;
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style table cells */
+table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Style radio buttons */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Style the buttons at the bottom of the table */
+table input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+table input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style the right content text */
+div > div:nth-child(2) > div:last-child {
+    width: 40%;
+    float: right;
+    font-size: 16px;
+}
+
+/* Style the <mark> element */
+mark {
+    background-color: #ffff00;
+    padding: 0 5px;
+    font-weight: bold;
+    color: #000;
+}
