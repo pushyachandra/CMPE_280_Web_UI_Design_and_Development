@@ -4,8 +4,9 @@
         <title>
             Score Card
         </title>
+        <script type="text/javascript" src="mainscript.js"></script>
     </head>
-    <body>
+    <body onload="calculateScore()">
         <div>
             <div>
                 Score Card
@@ -13,21 +14,21 @@
             <div>
                 <details>
                     <summary>Quantitative Section</summary>
-                    Number of Questions Answered: <br>
-                    Number of Correct Answers: <br>
-                    Score: 
+                    Number of Questions Answered:<span id="quantAns"></span><br>
+                    Number of Correct Answers: <span id="quantCorr"></span><br>
+                    Score:  <span id="quantScore"></span>
                 </details>
                 <details>
                     <summary>Reading Section</summary>
-                    Number of Questions Answered: <br>
-                    Number of Correct Answers: <br>
-                    Score: 
+                    Number of Questions Answered:<span id="readAns"></span><br>
+                    Number of Correct Answers: <span id="readCorr"></span><br>
+                    Score:  <span id="readScore"></span>
                 </details>
                 <details>
                     <summary>Audio/Video Section</summary>
-                    Number of Questions Answered: <br>
-                    Number of Correct Answers: <br>
-                    Score: 
+                    Number of Questions Answered:<span id="avAns"></span><br>
+                    Number of Correct Answers: <span id="avCorr"></span><br>
+                    Score:  <span id="avScore"></span>
                 </details>
             </div>
             <div>Thank You</div>

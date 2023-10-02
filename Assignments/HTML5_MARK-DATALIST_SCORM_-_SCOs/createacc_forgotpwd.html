@@ -2,26 +2,27 @@
 <html>
     <head>
         <title>Create Account / Forgot Password</title>
+        <script type="text/javascript" src="mainscript.js"></script>
     </head>
     <body>
         <a href="home.html"><input type="submit" value="Home"></a>
         <div>
             <div>Create Account</div>
-            Name: <input type="text" value="" id="name"><br>
-            Email: <input type="email" value="" id="email"><br>
-            Username: <input type="text" value="" id="usrnm"><br>
-            Password: <input type="password" value="" id="pwd"><br>
-            Re-type Password: <input type="password" value="" id="rpwd"><br>
-            <input type="submit" value="Register">
+            Name: <input type="text" value="" id="cr_name"><br>
+            Email: <input type="email" value="" id="cr_email"><br>
+            Username: <input type="text" value="" id="cr_usrnm"><br>
+            Password: <input type="password" value="" id="cr_pwd"><br>
+            Re-type Password: <input type="password" value="" id="cr_rpwd"><br>
+            <input type="submit" value="Create Account" onclick="create_acc()">
         </div>
         <div>
             <div>Forgot Password</div>
-            Enter Registered Name: <input type="text" value="" id="name"><br>
-            Enter Registered Email: <input type="email" value="" id="email"><br>
-            Enter Registered Username: <input type="text" value="" id="usrnm"><br>
-            Enter New Password: <input type="password" value="" id="pwd"><br>
-            Re-type New Password: <input type="password" value="" id="rpwd"><br>
-            <input type="submit" value="Reset Password">
+            Enter Registered Name: <input type="text" value="" id="fr_name"><br>
+            Enter Registered Email: <input type="email" value="" id="fr_email"><br>
+            Enter Registered Username: <input type="text" value="" id="fr_usrnm"><br>
+            Enter New Password: <input type="password" value="" id="fr_pwd"><br>
+            Re-type New Password: <input type="password" value="" id="fr_rpwd"><br>
+            <input type="submit" value="Reset Password" onclick="forgot_pass()">
 
         </div>
     </body>

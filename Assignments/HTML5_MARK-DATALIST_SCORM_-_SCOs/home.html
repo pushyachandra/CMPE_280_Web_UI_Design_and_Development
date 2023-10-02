@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Home</title>
+        <script type="text/javascript" src="mainscript.js"></script>
+        <link rel="stylesheet" href="home.css">
     </head>
     <body>
         <div>
@@ -15,16 +17,6 @@
                 <input type="submit" value="Submit" onclick="login()">
             </div>
         </div>
-    <script>
-        function login(){
-            if(document.getElementById("usr").value!="" && document.getElementById("pwd").value!=""){
-                window.location.href="disclaimer.html";
-            }
-            else{
-                alert("Username and/or Password not filled");
-            }
-        }
-    </script>
     </body>
     <footer>
 

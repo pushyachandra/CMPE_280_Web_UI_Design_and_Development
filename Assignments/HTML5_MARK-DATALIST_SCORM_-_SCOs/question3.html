@@ -4,6 +4,7 @@
         <title>
             Question 3
         </title>
+        <script type="text/javascript" src="mainscript.js"></script>
     </head>
     <body>
         <div>
@@ -12,42 +13,42 @@
             </div>
             <div>
                 <div style="width:60%;float:left;">
-                    <div>As per the latest twitter news, complete the article snippet given by selecting appropriate choices for the blanks.</div>
+                    <div>As per the latest Twitter news, complete the article snippet given by selecting appropriate choices for the blanks.</div>
                     <div>
                         <table style="width:100%;height:100%;">
                             <tr>
                                 <td>
-                                    <input type="radio" id="1a" name="option">
+                                    <input type="radio" id="1a" name="mark1">
                                     Option 1 Mark 1: $650
                                 </td>
                                 <td>
-                                    <input type="radio" id="1b" name="option">
+                                    <input type="radio" id="1b" name="mark2">
                                     Option 1 Mark 2: Twitter
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="radio" id="2a" name="option">
+                                    <input type="radio" id="2a" name="mark1">
                                     Option 2 Mark 1: $550 
                                 </td>
                                 <td>
-                                    <input type="radio" id="2b" name="option">
+                                    <input type="radio" id="2b" name="mark2">
                                     Option 2 Mark 2: Google
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="radio" id="3a" name="option">
+                                    <input type="radio" id="3a" name="mark1">
                                     Option 3 Mark 1: $650
                                 </td>
                                 <td>
-                                    <input type="radio" id="3b" name="option">
+                                    <input type="radio" id="3b" name="mark2">
                                     Option 3 Mark 2: Facebook
                                 </td>
                             </tr>
                             <tr>
-                                <td><input type="submit" value="Submit & Next Question"></td>
-                                <td><input type="submit" value="Cancel & Clear Selection"></td>
+                                <td><input type="submit" value="Submit & Next Question" onclick="submit('qus3','question4.html')"></td>
+                                <td><input type="submit" value="Cancel & Clear Selection" onclick="reset()"></td>
                             </tr>
                         </table>
                     </div>

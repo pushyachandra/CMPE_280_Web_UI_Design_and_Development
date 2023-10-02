@@ -4,6 +4,7 @@
         <title>
             Survey
         </title>
+        <script type="text/javascript" src="mainscript.js"></script>
         <style>
             textarea {
                 overflow-y: scroll;
@@ -38,7 +39,7 @@
                         </datalist>
                     </div>
                     <div>
-                        <input type="submit" value="Submit & Get Score">
+                        <input type="submit" value="Submit & Get Score" onclick="getscore()">
                     </div>
                 </div>
                 <div style="width:50%;float:right;">
@@ -54,7 +55,7 @@
                         </datalist>
                     </div>
                     <div>
-                        <input type="submit" value="Skip & Get Score">
+                        <input type="submit" value="Skip & Get Score" onclick="getscore()">
                     </div>
                 </div>
             </div>

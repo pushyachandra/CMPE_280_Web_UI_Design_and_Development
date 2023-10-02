@@ -12,9 +12,11 @@ div {
     background-color: #ffffff;
     border: 1px solid #ddd;
     margin: 20px auto;
-    max-width: 400px;
+    /* max-width: 800px; */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
 div > div:first-child {
@@ -24,20 +26,33 @@ div > div:first-child {
     text-align: center;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+div > div:last-child {
+    display: flex;
+    flex-direction: column;
 }
 
-a {
-    text-decoration: none;
-    color: #0074d9;
-    font-weight: bold;
+div > div:last-child > div:first-child {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    vertical-align: middle;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Style the label to be displayed inline with the radio button */
+label {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 input[type="submit"] {
@@ -49,8 +64,14 @@ input[type="submit"] {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    margin-right: 10px;
 }
 
 input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+math {
+    display: block;
+    margin: 10px 0;
 }
