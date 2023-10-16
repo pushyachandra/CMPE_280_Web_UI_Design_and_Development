@@ -28,8 +28,8 @@ async function send()
 }
 
 function cancel(){
-    document.getElementById("message").innerText = "";
-    document.getElementById("response-box").innerText = "";
+    document.getElementById("message-send").value = "";
+    document.getElementById("response-box").value = "";
 }
 
 function downloadTextFile() {
