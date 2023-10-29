@@ -1,7 +1,7 @@
 .block{
     border: 5px solid;
     margin: auto;
-    width: 50%;
+    width: 60%;
     padding: 10px;
     border-radius: 25px;
 }
@@ -88,4 +88,32 @@
 .save{
     text-align: center;
     padding:10px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    /* border-collapse: collapse; */
+    width: 100%;
+    border-collapse:separate;
+    border:solid #dddddd 1px;
+    border-radius:6px;
+}
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border-radius:6px;
+}
+  
+tr:nth-child(even) {
+    background-color: #dddddd;
+    border-radius:6px;
+}
+
+.sql-view{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

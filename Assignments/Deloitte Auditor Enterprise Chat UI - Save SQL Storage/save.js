@@ -4,7 +4,7 @@ $(function(){
 
 db.transaction(function(transaction){
 	var sql="CREATE TABLE audit_responses "+
-	"(sid INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"+
+	"(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"+
 	"question VARCHAR(1024) NOT NULL,"+
 	"response VARCHAR(1024) NOT NULL)";
 	transaction.executeSql(sql,undefined,function(){
@@ -15,18 +15,25 @@ db.transaction(function(transaction){
 });
 
 $("#savetosql").click(function(){
-var question=$("#message-send").val();
-var response=$("#response-box").val();
-db.transaction(function(transaction){
-var sql="INSERT INTO audit_responses(question,response) VALUES(?,?)";
-transaction.executeSql(sql,[question,response],function(){
-	alert("New audit is added successfully");
-},function(transaction,err){
-	alert(err.message);
-})
-})
+    var question=$("#message-send").val();
+    var response=$("#response-box").val();
+    db.transaction(function(transaction){
+    var sql="INSERT INTO audit_responses(question,response) VALUES(?,?)";
+    transaction.executeSql(sql,[question,response],function(){
+        alert("New audit is added successfully");
+    },function(transaction,err){
+        alert(err.message);
+    })
+    })
 })
 
+$("#hidesql").click(function(){
+    hidesql();
+});
+
+function hidesql(){
+    $("#itemlist").children().remove();
+}
 
 $("#viewfromsql").click(function(){
     loadData();
@@ -35,6 +42,7 @@ $("#viewfromsql").click(function(){
 
 function loadData(){
     $("#itemlist").children().remove();
+    $("#itemlist").append('<tr><th>Question</th><th>Response</th><th>Option</th></tr>')
     db.transaction(function(transaction){
         var sql="SELECT * FROM audit_responses";
         console.log("1")
@@ -47,7 +55,7 @@ function loadData(){
                     var id=row.id;
                     var response=row.response;
                     console.log("wow");
-                    $("#itemlist").append('<tr id="del'+id+'"><td>'+id+'</td><td>'+question+'</td><td id="newqty'+id+
+                    $("#itemlist").append('<tr id="del'+id+'"><td>'+question+'</td><td id="newqty'+id+
                     '">'+response+'</td><td><a href="#" class="btn btn-danger deleteitem" data-id="'+id+
                     '">Delete</a></td></tr>');
                 }

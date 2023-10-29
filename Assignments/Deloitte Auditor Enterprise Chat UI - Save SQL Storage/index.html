@@ -23,18 +23,19 @@
         <p class="response-question">Response</p>
         <textarea class="response-qus" id="response-box"></textarea>
         <div class="save">
-            <button class="but but-3" id="downloadButton">Save Responses</button>
+            <button class="but but-3" id="downloadButton">Save Responses to Text File</button>
             <button class="but but-3" id="savetosql">Save to SQL</button>
             <button class="but but-3" id="viewfromsql">View from SQL</button>
+            <button class="but but-3" id="hidesql">Hide Saved SQL View</button>
         </div>
         <script>
             var downloadButton = document.getElementById("downloadButton");
             downloadButton.addEventListener("click", downloadTextFile);
         </script>
     </div>
-    <div>
-        <table class="table table-bordered table-hover" id="itemlist">
-	
+    <div class="sql-view">
+        <table id="itemlist">
+
         </table>
     </div>
 </body>
