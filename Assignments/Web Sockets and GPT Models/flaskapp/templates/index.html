@@ -1,0 +1,107 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Socket Client</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        button {
+            background-color: #37424e;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+        
+        button:hover {
+            background-color: black;
+        }
+        
+        #result {
+            width: 90%;
+            padding: 30px;
+            margin: 50px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        #successfulResponses, #failedResponses {
+            margin-top: 10px;
+            color: white;
+        }
+
+        #buttons-tag{
+            text-align: center;
+        }
+        
+        #responses-tag{
+            text-align: center;
+        }
+
+        #full-box{
+            margin: auto;
+            margin-top:50px;
+            width: 50%;
+            padding: 30px;
+            border-radius: 20px;
+            background-color: #3b4aa3;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#runSocketClientButton").on("click", function() {
+                $.ajax({
+                    type: "POST",
+                    url: "/run_socket_client",
+                    success: function(response) {
+                        // Split the result into lines and join them with <br> tags
+                        var resultHtml = response.result.split('\n').join('<br>');
+                        $("#result").html(resultHtml);
+                        $("#successfulResponses").text("Successful Responses: " + response.successful_responses);
+                        $("#failedResponses").text("Failed Responses: " + response.failed_responses);
+                    },
+                    error: function(response) {
+                        $("#result").text("Error: " + response.error);
+                        $("#successfulResponses").text("Successful Responses: 0");
+                        $("#failedResponses").text("Failed Responses: 0");
+                    }
+                });
+            });
+    
+            $("#toggleLogsButton").on("click", function() {
+                $("#logArea").toggle(); // Toggle the visibility of the log area
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="full-box">
+        <h1>Socket Client</h1>
+        <div id="buttons-tag">
+            <button id="runSocketClientButton">Run Socket Client</button>
+            <button id="toggleLogsButton">Toggle Logs</button>
+        </div>
+        <div id="responses-tag">
+            <div id="successfulResponses">Successful Responses: 0</div>
+            <div id="failedResponses">Failed Responses: 0</div>
+        </div>
+    </div>
+    <div id="logArea" style="display: none;">
+        <div id="result" style="white-space: pre-line;"></div>
+    </div>
+</body>
+</html>
